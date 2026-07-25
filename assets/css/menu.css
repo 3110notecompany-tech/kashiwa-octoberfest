@@ -1,0 +1,422 @@
+@charset "UTF-8";
+
+/* override
+---------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+	.section-box__content {
+		max-width: 1000px;
+	}
+	.section-box:not(:last-child) {
+		margin-bottom: 130px;
+	}
+}
+
+@media (max-width: 767px) {
+	.section-box:not(:last-child) {
+		margin-bottom: 80px;
+	}
+}
+
+.anchor {
+	position: relative;
+}
+.anchor .anchor__inner {
+	position: absolute;
+	top: -20px;
+}
+
+.section-box.p-menu__kitchen_car {
+	margin-bottom: 40px;
+}
+
+.section__content {
+	position: relative;
+	padding-left: 67px;
+	padding-right: 67px;
+	padding-bottom: 100px;
+}
+
+.section__content:has(.list-caution) {
+	padding-bottom: 70px;
+}
+
+@media (max-width: 767px) {
+	.section__content {
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 60px;
+	}
+
+	.section__content:has(.list-caution) {
+		padding-bottom: 60px;
+	}
+}
+
+/* override */
+.section__content .list-caution {
+	margin-top: 30px;
+}
+
+.section__content .list-caution > li {
+	color: #444444;
+	font-size: 1.3rem;
+}
+
+@media (max-width: 767px) {
+	.section__content .list-caution {
+		margin-top: 20px;
+	}
+}
+
+/* 見出し */
+.p-heading {
+	position: relative;
+	margin: 0 auto;
+}
+.p-heading-inner {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding-top: 60px;
+	padding-bottom: 100px;
+}
+@media (max-width: 767px) {
+	.p-heading-inner {
+		padding-top: 48px;
+	}
+}
+@media (min-width: 768px) {
+	.p-heading {
+		max-width: 1160px;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+}
+
+/* 会場マップ */
+.section-map__content {
+	position: relative;
+}
+
+@media (max-width: 767px) {
+	.section-map__content {
+		padding: 0 30px 68px;
+	}
+
+}
+@media (min-width: 768px) {
+	.section-map .section-box__title .text-substtl {
+		padding-top: 13px;
+	}
+
+	.section-map__content {
+		padding: 0 67px 88px;
+	}
+
+	.menu-page .section-box__title .text-sttl {
+		font-size: 4.2rem;
+	}
+}
+
+/* オフィシャルビール */
+.p-menu__officialbooth .contents__point__title {
+	margin: 50px auto;
+	transform: none;
+}
+
+.p-menu__officialbooth .list-caution {
+	margin-top: 30px;
+}
+
+.p-menu__officialbooth .section-officialbooth__content {
+	position: relative;
+	padding: 0 67px 100px;
+}
+
+.officialbeerlist {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px 15px;
+}
+
+.officialbeerlist .item {
+	box-sizing: border-box;
+	padding: 25px 26px 30px;
+	border-radius: 10px;
+	border: 1px solid #F7BD01;
+	background-color: #fff;
+}
+
+.officialbeerlist .item .item__detail {
+	margin-top: 10px;
+}
+.officialbeerlist .item .item__ttl {
+	color: #CA451B;
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+.officialbeerlist .item .item__price {
+	margin-top: 10px;
+	color: #444444;
+	font-size: 1.5rem;
+}
+
+@media (max-width: 767px) {
+	.p-menu__officialbooth .itemlist {
+		margin-top: 40px;
+	}
+
+	.p-menu__officialbooth .section-officialbooth__content {
+		padding: 0 20px 100px;
+	}
+
+	.p-menu__officialbooth .list-caution {
+		margin-top: 20px;
+	}
+
+	.officialbeerlist {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 20px 0;
+	}
+}
+
+/* BEERブース */
+.p-menu__beerbooth .contents__point__title {
+	margin: 50px auto;
+	transform: none;
+}
+
+.p-menu__beerbooth .itemlist {
+	margin-top: 60px;
+}
+
+@media (max-width: 767px) {
+	.p-menu__beerbooth .itemlist {
+		margin-top: 40px;
+	}
+
+	.p-menu__beerbooth .section-map__content {
+		padding: 0 67px 100px;
+	}
+}
+
+/* ショップリスト */
+.menulist {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px 15px;
+}
+.menulist .item {
+	box-sizing: border-box;
+	padding: 25px 26px 30px;
+	border-radius: 10px;
+	border: 1px solid #F7BD01;
+	background-color: #fff;
+}
+.item__title {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 10px;
+}
+
+.menulist .item .item__shopNum,
+.officialbeerlist .item .item__shopNum {
+	flex: 0 0 35px;
+	color: #206C44;
+	font-family: "Londrina Solid", sans-serif;
+	font-weight: 900;
+	font-size: 2.8rem;
+	line-height: 1;
+}
+
+.menulist .item .item__ttl {
+	color: #CA451B;
+	font-size: 1.6rem;
+	font-weight: 700;
+	display: flex;
+	align-items: flex-start;
+}
+.menulist .item .item__list {
+	display: flex;
+	flex-wrap: nowrap;
+}
+.menulist .item__im {
+	clear: both;
+}
+.menulist .item__ims {
+	display: flex;
+	justify-content: space-between;
+	gap: 0 12px;
+}
+.menulist .item__ims .item__im {
+	flex: 1 0 calc(50% - 12px);
+	line-height: 0;
+}
+.menulist .item__ims .item__im > p {
+	margin-top: 18px;
+	font-size: 1.5rem;
+	line-height: 1.4;
+}
+.menulist .item .item__ttlsub {
+	color: #381A0B;
+	font-size: 1.6rem;
+	font-weight: 700;
+	margin-top: 10px;
+}
+.menulist .item .item__txt {
+	margin-top: 6px;
+	white-space: pre-wrap;
+}
+.market .m-market__main .lst-item .item__ttl {
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0;
+    font-weight: bold;
+    width: 100%;
+    padding: 20px 15px;
+    background: #fff;
+    color: #4EB5B5;
+    padding-left: 40px;
+}
+.menulist .item__cont {
+	display: flex;
+	gap: 12px;
+}
+.menulist .item__cont-inner {
+	flex: 1 0 calc(50% - 12px);
+}
+
+.p-menu__hofbraubooth .menulist {
+    display: block;
+}
+
+.p-menu__hofbraubooth .menulist .item__items {
+    display: flex;
+    gap: 0 12px;
+}
+
+.p-menu__hofbraubooth .menulist .item__ims {
+    display: block;
+}
+
+.p-menu__hofbraubooth .menulist .item__ims .item__im {
+    flex: 1 0 calc(33.33% - 12px);
+    line-height: 1.5;
+}
+
+.p-menu__hofbraubooth .menulist .item__tag {
+    display: block;
+}
+
+.p-menu__hofbraubooth .item__tag-inner + .item__tag-inner {
+    margin-top: 5px;
+}
+
+
+@media (max-width: 767px) {
+	.menulist {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 25px 0;
+	}
+	.menulist .item .item__shopNum {
+		font-size: 2.6rem;
+	}
+
+	.p-menu__hofbraubooth .menulist .item__items {
+		display: block;
+    }
+
+    .p-menu__hofbraubooth .menulist .item__ims {
+        margin-top: 20px;
+    }
+}
+
+.item__tag {
+	display: flex;
+	gap: 0 12px;
+	margin-top: 10px;
+	min-height: 24px;
+}
+.item__tag .item__tag-inner {
+	flex: 0 0 calc(50% - 12px);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.item__tag [class^="item__tag"] i {
+	padding: 1px 4px 3px;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.item__tag .item__tag1 i {
+	background-color: #0188f7;
+}
+.item__tag .item__tag2 i {
+	background-color: #CA451B;
+}
+.item__tag .item__tag3 i {
+	background-color: #F7BD01;
+}
+.item__tag .item__tag4 i,
+.item__tag .item__tag5 i,
+.item__tag .item__tag6 i,
+.item__tag .item__tag7 i {
+	background-color: #78952E;
+}
+
+
+.item__tag_offucial {
+	gap: 0 12px;
+	margin-top: 10px;
+	min-height: 24px;
+}
+.item__tag_offucial .item__tag-inner {
+	flex: 0 0 calc(50% - 12px);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.item__tag_offucial [class^="item__tag"] i {
+	padding: 1px 4px 3px;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.item__tag_offucial .item__tag1 i {
+	background-color: #0188f7;
+}
+.item__tag_offucial .item__tag2 i {
+	/* background-color: #206C44; */
+	background-color: #CA451B;
+}
+.item__tag_offucial .item__tag3 i {
+	/* background-color: #CA451B; */
+	background-color: #F7BD01;
+}
+.item__tag_offucial .item__tag4 i,
+.item__tag_offucial .item__tag5 i,
+.item__tag_offucial .item__tag6 i,
+.item__tag_offucial .item__tag7 i {
+	background-color: #78952E;
+}
+
+@media (max-width: 767px) {
+	.item__tag, .item__tag_offucial {
+		min-height: auto;
+	}
+	.foodmenu__inner .item__tag,
+	.foodmenu__inner .item__tag_offucial {
+		min-height: 24px;
+	}
+}

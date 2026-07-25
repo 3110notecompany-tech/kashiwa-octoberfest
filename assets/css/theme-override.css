@@ -1,0 +1,220 @@
+/* ============================================================
+   柏オクトーバーフェスト テーマ差し替え（ポスター準拠）
+   背景: 夜空(ネイビーティール) → 水辺(明るいブルー) の縦グラデ
+   design.md §2 のカラー想定に対応。
+   ベンダーCSS（common/top/menu.css）は変更せず上書きする。
+   ============================================================ */
+
+/* オーバースクロール時の下地も暗いネイビーに揃える */
+html,
+body {
+	background-color: #00303F !important;
+}
+
+/* ページ本体の下地（元は黄色 #FAD14A）→ ポスターの縦グラデ */
+#wrap {
+	background: linear-gradient(
+		180deg,
+		#00303F 0%,
+		#063f52 20%,
+		#0A6E8C 55%,
+		#2E7FA6 100%
+	) !important;
+	background-attachment: fixed !important;
+}
+
+/* ============================================================
+   ヒーロー直下のキャッチコピー帯（ポスター上部の文言）
+   ダークな下地に載せるため文字は白／シアン系。
+   ============================================================ */
+.mv-copy {
+	text-align: center;
+	color: #fff;
+	padding: 36px 20px 8px;
+}
+.mv-copy__catch {
+	font-family: "Kiwi Maru", serif;
+	font-size: 1.6rem;
+	color: #7fdfff;
+	line-height: 1.4;
+}
+.mv-copy__title {
+	font-family: "Oswald", sans-serif;
+	font-weight: 700;
+	font-size: 3.6rem;
+	letter-spacing: 0.04em;
+	line-height: 1.05;
+	margin-top: 6px;
+}
+.mv-copy__title .yr {
+	color: #ffd24a;
+}
+.mv-copy__sub {
+	font-family: "Kiwi Maru", serif;
+	font-size: 1.5rem;
+	margin-top: 10px;
+}
+.mv-copy__brand {
+	font-family: "Kiwi Maru", serif;
+	font-size: 1.3rem;
+	margin-top: 6px;
+	opacity: 0.9;
+}
+.mv-copy__date {
+	font-family: "Oswald", sans-serif;
+	font-size: 2.6rem;
+	margin-top: 22px;
+	letter-spacing: 0.02em;
+}
+.mv-copy__date small {
+	font-size: 1.3rem;
+}
+.mv-copy__place {
+	font-size: 1.3rem;
+	margin-top: 8px;
+}
+@media (max-width: 767px) {
+	.mv-copy__title { font-size: 2.6rem; }
+	.mv-copy__date { font-size: 2.1rem; }
+}
+
+/* ヘッダーのテキストロゴ（ダミーの logo.png 画像を置き換え） */
+.header-logo-text {
+	display: inline-flex;
+	align-items: center;
+	height: 100%;
+	padding: 0 4px;
+	font-family: "Oswald", sans-serif;
+	font-weight: 700;
+	font-size: 1.7rem;
+	letter-spacing: 0.02em;
+	color: #fff;
+	white-space: nowrap;
+}
+@media (max-width: 767px) {
+	.header-logo-text { font-size: 1.3rem; }
+}
+
+/* スクリーンリーダー用（視覚的に非表示だが読み上げ対象） */
+.u-hidden-visually {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* ヒーロー: 会場写真をフル幅バナーで表示 */
+.mv-hero {
+	width: 100%;
+	line-height: 0;
+}
+.mv-hero img {
+	width: 100%;
+	height: auto;
+	max-height: 560px;
+	object-fit: cover;
+	object-position: center 40%;
+	display: block;
+}
+
+/* （旧）ポスターをセンター配置する場合のスタイル（未使用時も保持） */
+.mv-poster {
+	text-align: center;
+	padding: 24px 16px 8px;
+}
+.mv-poster img {
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45);
+}
+
+/* テンプレ同梱のダミー見出しリボン（img_ttl_pc.png = NO IMAGE）を非表示 */
+.section-box .section-box__title::before {
+	display: none !important;
+}
+
+/* 「調整中」プレースホルダ（出店店舗・出演者など未確定枠） */
+.tba {
+	text-align: center;
+	font-family: "Kiwi Maru", serif;
+	font-size: 1.8rem;
+	color: #555;
+	padding: 24px 0;
+}
+.tba small {
+	display: block;
+	margin-top: 8px;
+	font-size: 1.2rem;
+	color: #888;
+}
+
+/* ============================================================
+   追加調整（ポスター準拠のカラー統一）
+   1. フッター見出しの木の葉（ホップ）アイコンを削除
+   2. 緑（#206C44）→ タイトルの黄色 #F7BD01
+   3. 各セクションの枠 → ポスターの金枠色 #C2A374
+   ============================================================ */
+
+/* 1. フッター見出し前の木の葉アイコン（icon_01.png）を削除 */
+.footer__info--row .title::before {
+	display: none !important;
+}
+.footer__info--row .title {
+	padding-left: 0 !important;
+}
+
+/* 2-a. ナビ3ボタン（緑）→ 黄色。文字・矢印は濃色にして可読性を確保 */
+.pagelink a {
+	border-color: #F7BD01 !important;
+	background-color: #F7BD01 !important;
+}
+.pagelink a > span {
+	color: #17434C !important;
+}
+.pagelink a:before {
+	background-image: url(../img/common/arrow_btm_w02.png) !important;
+}
+
+/* 2-b. 英語見出しの緑 → 黄色文字＋濃紺の影（ポスター調・視認性維持） */
+.section-box__title .text-sttl {
+	color: #F7BD01 !important;
+	text-shadow: 2px 2px #123B47 !important;
+}
+
+/* 3. セクションの枠（緑）→ ポスターの金枠色。内側の生成りラインは維持 */
+.section-box {
+	background-color: #C2A374 !important;
+}
+.section-box .section-box__inner {
+	background-color: #C2A374 !important;
+}
+
+/* ============================================================
+   ヘッダー・フッターを「2026」と同じ黄色 (#ffd24a) に
+   可読性のため、ヘッダーのロゴ文字・ハンバーガー線は濃色に
+   ============================================================ */
+.header__main {
+	background: #ffd24a !important;
+}
+.header-logo-text {
+	color: #17434C !important;
+}
+.header__main--right #open_menu:before,
+.header__main--right #open_menu:after {
+	background-color: #17434C !important;
+}
+.footer {
+	background-color: #ffd24a !important;
+}
+/* コピーライト帯の緑を撤去し、黄色＋濃色文字に統一 */
+.footer__copyright {
+	background: #ffd24a !important;
+	color: #17434C !important;
+}

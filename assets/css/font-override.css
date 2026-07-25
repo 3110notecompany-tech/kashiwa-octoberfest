@@ -1,0 +1,32 @@
+/* ============================================================
+   柏オクトーバーフェスト フォント差し替え（design.md §3）
+   - 英字見出し・数字 : Oswald
+   - 和文見出し・キャッチ : Kiwi Maru
+   - 和文本文 : Noto Sans JP
+   ベンダーCSS（common/top/menu.css）は変更せず、ここで上書きする。
+   ============================================================ */
+
+/* --- 英字見出し・数字 → Oswald --- */
+.text-sttl,
+.text-sttl span,
+.c-title__en,
+.top__news .top__news__title,
+.list-point .ttl-list,
+.contents__count__wrap__text2 .num,
+.u-text-xl {
+	font-family: "Oswald", sans-serif !important;
+}
+
+/* --- 和文見出し・キャッチ → Kiwi Maru --- */
+.text-substtl,
+.text-substtl span,
+.contents__point__title__inner,
+.section-box__lead,
+.faq__lead {
+	font-family: "Kiwi Maru", serif !important;
+}
+
+/* --- 和文本文 → Noto Sans JP --- */
+body {
+	font-family: "Noto Sans JP", "ヒラギノ角ゴシック", "Hiragino Sans", "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif !important;
+}
