@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>柏オクトーバーフェスト ヒーロー再現プレビュー</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Kiwi+Maru:wght@400;500&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a2b38;
+  --navy-top:#06222d;
+  --cyan:#53c6de;
+  --white:#ffffff;
+  --lime:#c9d84b;   /* OKTOBERFEST の K */
+  --gold:#f3c623;   /* 2026・オクトーバーフェスト */
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:linear-gradient(180deg,var(--navy-top),var(--navy));
+  font-family:"Noto Sans JP",sans-serif;
+  color:var(--white);
+  -webkit-font-smoothing:antialiased;
+}
+.hero{
+  position:relative;
+  max-width:900px;
+  margin:0 auto;
+  padding:38px 40px 30px;
+  text-align:center;
+}
+/* 上部キャッチ左（手書き風・シアン・段組み） */
+.catch-left{
+  position:absolute;
+  top:30px;left:34px;
+  font-family:"Kiwi Maru",serif;
+  color:var(--gold);
+  font-size:20px;
+  line-height:1.15;
+  text-align:left;
+  transform:rotate(-2deg);
+  font-weight:500;
+}
+.catch-left span{display:block;}
+.catch-left span:nth-child(2){margin-left:26px;}
+.catch-left span:nth-child(3){margin-left:52px;}
+/* 上部キャッチ右（シアン・1行） */
+.catch-top{
+  font-family:"Kiwi Maru",serif;
+  color:var(--gold);
+  font-size:23px;
+  font-weight:500;
+  letter-spacing:.04em;
+  margin-bottom:2px;
+}
+/* KASHIWA */
+.kashiwa{
+  font-family:"Oswald",sans-serif;
+  font-weight:600;
+  letter-spacing:.34em;
+  font-size:26px;
+  margin-left:.34em;   /* letter-spacing の右余白を相殺 */
+  margin-bottom:-6px;
+}
+/* OKTOBERFEST 2026 */
+.logo-row{
+  position:relative;
+  display:inline-block;
+}
+.logo-main{
+  font-family:"Oswald",sans-serif;
+  font-weight:700;
+  font-size:118px;
+  line-height:.92;
+  letter-spacing:-.01em;
+  transform:scaleX(1.02);
+  white-space:nowrap;
+}
+.logo-main .k{
+  color:var(--lime);
+  display:inline-block;
+  transform:rotate(-8deg);
+}
+.year{
+  position:absolute;
+  right:150px;
+  bottom:-16px;
+  font-family:"Oswald",sans-serif;
+  font-weight:700;
+  font-size:44px;
+  color:var(--gold);
+  letter-spacing:.02em;
+}
+/* burst（Tの右上の光） */
+.burst{
+  position:absolute;
+  top:-6px;right:36px;
+  width:70px;height:40px;
+}
+.burst i{
+  position:absolute;left:50%;bottom:0;
+  width:2.5px;height:20px;
+  background:var(--white);
+  transform-origin:bottom center;
+  border-radius:2px;
+}
+.burst i:nth-child(1){transform:rotate(-40deg)}
+.burst i:nth-child(2){transform:rotate(-25deg)}
+.burst i:nth-child(3){transform:rotate(-10deg)}
+.burst i:nth-child(4){transform:rotate(5deg)}
+.burst i:nth-child(5){transform:rotate(20deg)}
+/* 第1回 柏オクトーバーフェスト（破線で挟む） */
+.subtitle{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  margin-top:14px;
+  font-family:"Kiwi Maru",serif;
+  font-weight:500;
+  font-size:27px;
+  letter-spacing:.02em;
+}
+.subtitle .line{
+  flex:0 0 90px;
+  border-top:2px dashed rgba(255,255,255,.85);
+}
+.subtitle .jp{color:var(--white);}
+.subtitle .gold{color:var(--gold);}
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="catch-left">
+      <span>ふらっと</span>
+      <span>寄ったら、</span>
+      <span>異空間♪</span>
+    </div>
+    <p class="catch-top">未来へつなぐ、カシワブランド</p>
+    <p class="kashiwa">KASHIWA</p>
+    <div class="logo-row">
+      <span class="burst"><i></i><i></i><i></i><i></i><i></i></span>
+      <h1 class="logo-main">O<span class="k">K</span>TOBERFEST</h1>
+      <span class="year">2026</span>
+    </div>
+    <div class="subtitle">
+      <span class="line"></span>
+      <span><span class="jp">第1回 柏</span><span class="gold">オクトーバーフェスト</span></span>
+      <span class="line"></span>
+    </div>
+  </div>
+</body></html>
